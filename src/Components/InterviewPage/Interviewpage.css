@@ -1,0 +1,134 @@
+.step1{
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+
+
+.background {
+    background-image: url(./Background.png);
+    background-size: cover;
+  }
+  
+  .container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%vw;
+    max-width: 320px;
+    height: 450px;
+    margin: auto;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    position: absolute;
+    border-radius: 15px;
+    background: #1F1A30;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  }
+  
+  .header {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    font-family: century gothic;
+  }
+  
+  .name {
+    margin-top: 40px;
+  }
+  
+  .email {
+    margin-top: 15px;
+  }
+  
+  .password {
+    margin-top: 15px;
+  }
+  .gender {
+    margin-top: 15px;
+  }
+  label{
+    color:white;
+    font-size: 15px;
+  }
+  ::placeholder {
+    color: white;
+  }
+  
+  .textbox:focus, .dropdown:focus {
+    outline-width: 0px;
+  }
+  
+  .textbox {
+    width: 90%;
+    height: 35px;
+    padding: 5px;
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+    font-family: century gothic;
+    border: none;
+    border-radius: 25px;
+    background: #39304D;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  }
+  
+  .options {
+    margin-top: 25px;
+    font-size: 12px;
+    font-family: century gothic;
+  }
+  
+
+  
+  .createAccount:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #03564F;
+  }
+  
+  .createAccount {
+    width: 200px;
+    height: 45px;
+    margin-top: 25px;
+    font-size: 15px;
+    font-family: century gothic;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    background-color: #0DF6E3;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+  }
+  
+  .account {
+    margin-top: 25px;
+    color: white;
+    font-size: 14px;
+    font-family: century gothic;
+  }
+  
+  .dropdown {
+    width: 97%;
+    height: 45px;
+    padding: 5px;
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+    font-family: century gothic;
+    border: none;
+    border-radius: 25px;
+    background: #39304D;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+    appearance: none; /* For modern browsers */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-image: url('path_to_custom_arrow_icon.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 20px;
+  }
+  
