@@ -14,9 +14,9 @@
   text-align: center;
   color: white;
     content: '';
-    background-image: url('./Components/Assests/Background.png');
+    /* background-image: url('./Components/Assests/Background.png');
     background-size: cover;
-    position: absolute;
+    position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
