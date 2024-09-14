@@ -7,7 +7,8 @@ import Why from '../Why/Why';
 import CourseCards from '../CourseCards/CourseCards';
 import CourseCard from '../CourseCard/CourseCard';
 import Scrolling from '../Scrolling/Scrolling';
-import CourseOutComes from '../CourseOurComes/CourseOurComes'
+import CourseOutComes from '../CourseOurComes/CourseOurComes';
+import './Main.css'; 
 
 const steps = [
   { image: circle_1, label: 'Registration' },
@@ -17,13 +18,13 @@ const steps = [
 
 export default function Main() {
   return (
-    <div>
-         {/* <HowWork title="How Our Mock Interviews Work" steps={steps} />
-         <Why/> */}
-         {/* <CourseCards/> */}
-         <Scrolling></Scrolling>
+    <div className="main-container">
+         <HowWork title="How Our Mock Interviews Work" steps={steps} />
+         <Why/>
+         <CourseCards/>
+         <Scrolling/>
          <CourseCard/>
-         <CourseOutComes></CourseOutComes>
+         <CourseOutComes/>
     </div>
-  )
+  );
 }
