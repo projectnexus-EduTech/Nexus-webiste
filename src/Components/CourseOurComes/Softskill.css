@@ -1,0 +1,223 @@
+/* General styles for soft skills section */
+.softskill_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.softskills_top h1 {
+    text-align: center;
+    margin-bottom: 3px; 
+    font-weight: 600;
+    position: relative;
+}
+
+/* .softskills_top h1::after {
+    content: '';
+    background: #fd9e74;
+    width: 100px; 
+    height: 3px; 
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+.softskills_text p {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.soft_container_group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.icon_correct {
+    width: 100px;
+    color: greenyellow;
+}
+
+.soft_container_group .card {
+    width: 330px;
+    height: 80px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.wave {
+    position: absolute;
+    transform: rotate(90deg);
+    left: -31px;
+    top: 32px;
+    width: 80px;
+    fill: #04e4003a;
+}
+
+.icon-container {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04e40048;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.icon {
+    width: 17px;
+    height: 17px;
+    color: #269b24;
+}
+
+.message-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.message-text,
+.sub-text {
+    margin: 0;
+    cursor: default;
+}
+
+.message-text {
+    color: #269b24;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.cross-icon {
+    width: 18px;
+    height: 18px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .softskills_text p {
+        width: 90%;
+    }
+
+    .soft_container_group {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .soft_container_group .card {
+        width: 100%;
+        height: auto;
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .icon-container {
+        width: 30px;
+        height: 30px;
+    }
+
+    .icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .message-text {
+        font-size: 15px;
+    }
+
+    .sub-text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .softskills_text p {
+        width: 95%;
+    }
+
+    .soft_container_group {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .soft_container_group .card {
+        width: 100%;
+        height: auto;
+        padding: 5px 10px;
+        gap: 8px;
+    }
+
+    .icon-container {
+        width: 25px;
+        height: 25px;
+    }
+
+    .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .message-text {
+        font-size: 14px;
+    }
+
+    .sub-text {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .softskills_text p {
+        width: 100%;
+    }
+
+    .soft_container_group {
+        grid-template-columns: 1fr;
+    }
+
+    .soft_container_group .card {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .icon-container {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .message-text {
+        font-size: 13px;
+    }
+
+    .sub-text {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+.ScrollingParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    /* height: 100vh;  */
+  }
+  
+  .ScrollingContainer {
+    display: flex;
+    padding: 30px;
+    height: 20vh;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    background-color: #81957A;
+  }
+  
+  .leftBox h2 {
+    color: orange;
+  }
+  
+  /* Mobile layout (max-width: 768px) */
+  @media only screen and (max-width: 768px) {
+    .ScrollingContainer {
+      flex-direction: column;
+      padding: 20px;
+      height: auto;
+      width: 80%;
+    }
+    .leftBox h2 {
+      font-size: 18px;
+    }
+  }
+  
+  /* Tablet layout (min-width: 769px and max-width: 1024px) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .ScrollingContainer {
+      padding: 25px;
+      height: 25vh;
+      width: 60%;
+    }
+    .leftBox h2 {
+      font-size: 20px;
+    }
+  }
+  
+  /* Desktop layout (min-width: 1025px) */
+  @media only screen and (min-width: 1025px) {
+    .ScrollingContainer {
+      padding: 30px;
+      height: 20vh;
+      width: 50%;
+    }
+    .leftBox h2 {
+      font-size: 22px;
+    }
+  }
