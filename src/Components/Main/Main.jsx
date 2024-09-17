@@ -6,6 +6,11 @@ import circle_3 from '../Assests/number-3.png';
 import Why from '../Why/Why';
 import Mockinterview from '../Mockinterview/Mockinterview';
 import { Price } from '../price/Price';
+import CourseCards from '../CourseCards/CourseCards';
+import CourseCard from '../CourseCard/CourseCard';
+import Scrolling from '../Scrolling/Scrolling';
+import CourseOutComes from '../CourseOurComes/CourseOurComes';
+import './Main.css'; 
 
 const steps = [
   { image: circle_1, label: 'Registration' },
@@ -21,5 +26,5 @@ export default function Main() {
          <Why/>
          <Price/>
     </div>
-  )
+  );
 }
