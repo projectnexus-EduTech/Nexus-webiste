@@ -1,0 +1,22 @@
+.no-bullets {
+  list-style-type: none;
+  padding-left: 20px; 
+}
+
+.no-bullets li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.no-bullets li .fa-icon {
+  margin-right: 10px;
+}
+
+.block{
+  border: 2px solid black;
+  background-color: green;
+  width: 700px;
+  margin-left: 250px;
+  border-radius: 10px;
+}
