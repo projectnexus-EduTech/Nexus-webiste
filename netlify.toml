@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+  node_version = "20.2.0"
+
+[context.production]
+  environment = { CI = "false" }
