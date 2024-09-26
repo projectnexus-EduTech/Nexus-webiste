@@ -109,7 +109,7 @@ function Homepage() {
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                <img className='h-10' src={logo} alt="" />
+                <img className='h-15' src={logo} alt="" />
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
