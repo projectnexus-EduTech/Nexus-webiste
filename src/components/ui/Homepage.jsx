@@ -7,6 +7,7 @@ import { Code, Briefcase, Users, MessageSquare, ChevronRight, Github, Linkedin, 
 import { Button } from './button';
 import { Textarea } from './textarea';
 import { Input } from './input';
+import logo from '../../Assests/logo_without_bg-new.png'
 
 function FloatingCube({ position, color }) {
   const mesh = useRef();
@@ -108,7 +109,7 @@ function Homepage() {
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                Nexus
+                <img className='h-10' src={logo} alt="" />
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
@@ -309,8 +310,8 @@ function Homepage() {
       <footer className="relative z-10 py-8 px-6 backdrop-blur-md bg-black/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4 md:mb-0">
-              FutureTech
+            <div className="bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4 md:mb-0">
+              <img className="h-10" src={logo} alt="" />
             </div>
             <nav className="mb-4 md:mb-0">
               <ul className="flex flex-wrap justify-center md:justify-end space-x-6">
@@ -336,7 +337,7 @@ function Homepage() {
             </div>
           </div>
           <div className="mt-8 text-center text-sm text-gray-400">
-            © 2023 FutureTech. All rights reserved.
+            © 2024 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4 md:mb-0">Project Nexus</span>. All rights reserved.
           </div>
         </div>
       </footer>
