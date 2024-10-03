@@ -62,7 +62,8 @@ function InterviewRegistration() {
             <FloatingText text="Interview" position={[2, 2, -5]} color="white" />
             <FloatingText text="Registration" position={[0, -2, -5]} color="white" />
           </Suspense>
-        </Canvas>
+        </Canvas>y
+        
       </div>
 
       {/* Registration Form */}

@@ -8,42 +8,8 @@ import { Button } from './button';
 import { Textarea } from './textarea';
 import { Input } from './input';
 import logo from '../../Assests/logo_without_bg-new.png'
-
-function FloatingCube({ position, color }) {
-  const mesh = useRef();
-  useFrame(() => {
-    mesh.current.rotation.x += 0.01;
-    mesh.current.rotation.y += 0.01;
-  });
-  return (
-    <mesh ref={mesh} position={position}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={color} />
-    </mesh>
-  );
-}
-
-function AnimatedText({ text, position, color }) {
-  const textRef = useRef();
-  useFrame(({ clock }) => {
-    textRef.current.position.y = position[1] + Math.sin(clock.elapsedTime) * 0.2;
-  });
-  return (
-    <Text
-      ref={textRef}
-      position={position}
-      color={color}
-      fontSize={0.5}
-      maxWidth={2}
-      lineHeight={1}
-      letterSpacing={0.02}
-      textAlign="center"
-      font="/fonts/Inter_Bold.json"
-    >
-      {text}
-    </Text>
-  );
-}
+import Landing from './Landing';
+import Background from './Background';
 
 function Homepage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,21 +17,21 @@ function Homepage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const courses = [
-    { 
-      title: 'Java Mastery', 
-      icon: Code, 
+    {
+      title: 'Java Mastery',
+      icon: Code,
       color: 'from-red-400 to-orange-500',
       description: 'Master Java programming from basics to advanced concepts. Learn object-oriented programming, data structures, and popular frameworks like Spring.'
     },
-    { 
-      title: 'Python Wizardry', 
-      icon: Code, 
+    {
+      title: 'Python Wizardry',
+      icon: Code,
       color: 'from-blue-400 to-green-500',
       description: 'Become a Python expert. Cover everything from fundamental syntax to advanced topics like machine learning and web development with Django.'
     },
-    { 
-      title: 'Web Development', 
-      icon: Code, 
+    {
+      title: 'Web Development',
+      icon: Code,
       color: 'from-purple-400 to-pink-500',
       description: 'Comprehensive web development bootcamp. Learn HTML, CSS, JavaScript, React, and Node.js to build full-stack web applications.'
     },
@@ -87,30 +53,21 @@ function Homepage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* 3D Background */}
-      <div className="fixed inset-0 z-0">
-        <Canvas>
-          <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
-          <Stars />
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} />
-          <Suspense fallback={null}>
-            <FloatingCube position={[-4, 2, -5]} color="blue" />
-            <FloatingCube position={[4, -2, -5]} color="purple" />
-            <FloatingCube position={[-3, -3, -5]} color="green" />
-            <AnimatedText text="Future" position={[-2, 0, -5]} color="white" />
-            <AnimatedText text="Tech" position={[2, 0, -5]} color="white" />
-          </Suspense>
-        </Canvas>
-      </div>
+      <Background />
 
       {/* Header */}
       <header className="relative z-20 backdrop-blur-md bg-black/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              <a href="#" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                <img className='h-10' src={logo} alt="" />
-              </a>
+
+              <Link
+                to="/"
+                className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600"
+              >
+                PNexus
+              </Link>
+
             </div>
             <div className="-mr-2 -my-2 md:hidden">
               <Button onClick={toggleMenu} className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -119,7 +76,14 @@ function Homepage() {
               </Button>
             </div>
             <nav className="hidden md:flex space-x-10">
-              {['Courses', 'Services', 'Interviews', 'About', 'Contact'].map((item) => (
+              <a href="" className="text-base font-medium text-white hover:text-blue-400 transition-colors">
+                <span className="absolute left-[-15px] top-[6px] w-2 h-2 rounded-full bg-red-500 animate-blink"></span>
+                live Class</a>
+                <Link to={"/About us"} className="text-base font-medium text-white hover:text-blue-400 transition-colors">
+                About Us
+                </Link>
+                
+              {['Courses', 'Services', 'Interviews', 'Contact'].map((item) => (
                 <a key={item} href={`#${item.toLowerCase()}`} className="text-base font-medium text-white hover:text-blue-400 transition-colors">
                   {item}
                 </a>
@@ -142,7 +106,7 @@ function Homepage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                        Nexus
+                        Project Nexus
                       </span>
                     </div>
                     <div className="-mr-2">
@@ -154,7 +118,14 @@ function Homepage() {
                   </div>
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
-                      {['Courses', 'Services', 'Interviews', 'About', 'Contact'].map((item) => (
+                      <a href="" className="ml-3 text-base font-medium text-white">
+                        <span className="absolute left-[-15px] top-[6px] w-2 h-2 rounded-full bg-red-500 animate-blink"></span>
+                        Live Class</a>
+                      <Link to="/About us" className="ml-3 text-base font-medium text-white">
+                        <span className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-700"></span>
+                        About Us</Link>
+
+                      {['Courses', 'Services', 'Interviews', 'Contact'].map((item) => (
                         <a
                           key={item}
                           href={`#${item.toLowerCase()}`}
@@ -174,33 +145,7 @@ function Homepage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center p-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"
-        >
-          Shape Your Future in Tech
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl mb-8 max-w-2xl"
-        >
-          Unlock your potential with cutting-edge courses, personalized mentorship, and real-world projects.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg">
-            Get Started
-          </Button>
-        </motion.div>
-      </section>
+      <Landing />
 
       {/* Courses Section */}
       <section id="courses" className="relative z-10 py-20 px-6">
@@ -217,8 +162,8 @@ function Homepage() {
               <course.icon className={`w-12 h-12 mb-4 text-transparent bg-clip-text bg-gradient-to-r ${course.color}`} />
               <h3 className="text-2xl font-semibold mb-2">{course.title}</h3>
               <p className="text-gray-300 mb-4">Master the art of coding with our comprehensive curriculum.</p>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white"
                 onClick={() => openModal(course)}
               >
@@ -264,15 +209,15 @@ function Homepage() {
             Prepare for your dream job with our professional mock interviews. Get valuable feedback and improve your interview skills.
           </p>
           <Link to="/register-interview">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg">
-            Register for Interview
-          </Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg">
+              Register for Interview
+            </Button>
           </Link>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="relative z-10 py-20 px-6 bg-black/30">
+      {/* <section className="relative z-10 py-20 px-6 bg-black/30">
         <h2 className="text-4xl font-bold mb-12 text-center">What Our Students Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
@@ -293,7 +238,7 @@ function Homepage() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/*Contact Form */}
       <section id="contact" className="relative z-10 py-20 px-6">

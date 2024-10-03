@@ -1,0 +1,23 @@
+{
+    "courses": [
+      { 
+        "title": "Java Mastery", 
+        "icon": "code", 
+        "color": "from-red-400 to-orange-500",
+        "description": "Master Java programming from basics to advanced concepts. Learn object-oriented programming, data structures, and popular frameworks like Spring."
+      },
+      { 
+        "title": "Python Wizardry", 
+        "icon": "code", 
+        "color": "from-blue-400 to-green-500",
+        "description": "Become a Python expert. Cover everything from fundamental syntax to advanced topics like machine learning and web development with Django."
+      },
+      { 
+        "title": "Web Development", 
+        "icon": "code", 
+        "color": "from-purple-400 to-pink-500",
+        "description": "Comprehensive web development bootcamp. Learn HTML, CSS, JavaScript, React, and Node.js to build full-stack web applications."
+      }
+    ]
+  }
+  
