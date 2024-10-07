@@ -76,9 +76,9 @@ function Homepage() {
               </Button>
             </div>
             <nav className="hidden md:flex space-x-10">
-              <a href="" className="text-base font-medium text-white hover:text-blue-400 transition-colors">
+            <Link to="/Live Courses" className="text-base font-medium text-white hover:text-blue-400 transition-colors">
                 <span className="absolute left-[-15px] top-[6px] w-2 h-2 rounded-full bg-red-500 animate-blink"></span>
-                live Class</a>
+                live Class</Link>
                 <Link to={"/About us"} className="text-base font-medium text-white hover:text-blue-400 transition-colors">
                 About Us
                 </Link>
@@ -118,9 +118,9 @@ function Homepage() {
                   </div>
                   <div className="mt-6">
                     <nav className="grid gap-y-8">
-                      <a href="" className="ml-3 text-base font-medium text-white">
+                    <Link to="/Live Courses" className="ml-3 text-base font-medium text-white">
                         <span className="absolute left-[-15px] top-[6px] w-2 h-2 rounded-full bg-red-500 animate-blink"></span>
-                        Live Class</a>
+                        Live Class</Link>
                       <Link to="/About us" className="ml-3 text-base font-medium text-white">
                         <span className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-700"></span>
                         About Us</Link>

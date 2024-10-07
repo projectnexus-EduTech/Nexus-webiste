@@ -5,6 +5,7 @@ import InterviewRegistration from './components/ui/InterviewRegistration.jsx';
 import { div } from 'framer-motion/client';
 import Login from '../src/components/ui/Login/Login.jsx'
 import AboutUs from '../src/components/ui/AboutUs.jsx'
+import LiveClass from './components/LiveClass/LiveClass.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/register-interview" element={<InterviewRegistration />} />
         <Route path="/About us" element={<AboutUs/>}/>
+        <Route path="/Live Courses" element={<LiveClass/>}/>
       </Routes>
     </Router>
     // <div>
